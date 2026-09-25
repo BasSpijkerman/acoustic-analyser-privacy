@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Acoustic Analyser</title>
+    <title>Acoustic Analyser - Real-Time Audio Measurement</title>
     <style>
         :root {
             --primary: #2563eb;
@@ -21,20 +21,17 @@
             background-color: var(--background);
             margin: 0;
             padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 40px 20px;
-        }
-
-        .card {
-            background-color: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
         h1 {
@@ -42,44 +39,40 @@
             font-size: 2.5rem;
             margin-top: 0;
             margin-bottom: 8px;
+            letter-spacing: -0.02em;
         }
 
-        .last-updated {
+        p.sub {
             color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 32px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid var(--border);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
         }
 
-        h2 {
-            color: var(--primary);
-            font-size: 1.5rem;
-            margin-top: 32px;
-            margin-bottom: 16px;
+        nav {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        p, li {
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        a {
-            color: var(--primary);
+        nav a {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            color: var(--text-main);
             text-decoration: none;
+            transition: all 0.2s ease;
+            background-color: var(--surface);
         }
 
-        a:hover {
-            text-decoration: underline;
+        nav a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
         }
 
         .footer {
-            margin-top: 40px;
-            text-align: center;
+            margin-top: 60px;
             color: var(--text-muted);
             font-size: 0.9rem;
         }
@@ -87,34 +80,16 @@
 </head>
 <body>
     <div class="container">
-        <div class="card">
-            <h1>Privacy Policy</h1>
-            <div class="last-updated">Last updated: <script>document.write(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }));</script></div>
-
-            <h2>1. Introduction</h2>
-            <p>This Privacy Policy applies to the "Acoustic Analyser" mobile application (the "App") created by Bas Spijkerman. This page is used to inform users regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our App.</p>
-
-            <h2>2. Data Collection and Usage</h2>
-            <p><strong>Acoustic Analyser does not collect, store, or transmit any personally identifiable information.</strong></p>
-            <p>The App requires the following permissions to function properly:</p>
-            <ul>
-                <li><strong>Microphone Access:</strong> The App requires access to your device's microphone to perform acoustic analysis in real-time. The audio data is processed locally on your device and is <strong>never</strong> transmitted to our servers, recorded, or shared with third parties.</li>
-            </ul>
-
-            <h2>3. Local Storage</h2>
-            <p>The App may store your settings, preferences, and local analysis data directly on your device using local storage mechanisms (such as SharedPreferences). This data remains on your device and is not accessible by us.</p>
-
-            <h2>4. Third-Party Services</h2>
-            <p>The App does not use any third-party services that may collect information used to identify you.</p>
-
-            <h2>5. Changes to This Privacy Policy</h2>
-            <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
-
-            <h2>6. Contact Us</h2>
-            <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at the email provided on the App Store page or through our GitHub repository.</p>
-        </div>
+        <h1>Acoustic Analyser</h1>
+        <p class="sub">Precise, real-time audio and spectrum analysis for iOS.</p>
+        
+        <nav>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="support.html">Support</a>
+        </nav>
+        
         <div class="footer">
-            &copy; <script>document.write(new Date().getFullYear());</script> Acoustic Analyser. All rights reserved.
+            &copy; <script>document.write(new Date().getFullYear());</script> Bas Spijkerman
         </div>
     </div>
 </body>
